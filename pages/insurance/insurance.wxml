@@ -1,0 +1,63 @@
+<view class="header">
+  <view class="back" bindtap='gotoIndex'>返回</view>
+  客户详情
+</view>
+
+<view class="viewContent">
+  <view class="userMessage">
+    <view class="user">
+      
+    </view>
+    <view class="insurance_item">
+      <view class="insurance_tap">
+        <view class="num"><text>1</text>个</view>
+        <view class="txt">家庭成员</view>
+      </view>
+      <view class="insurance_tap">
+        <view class="num"><text>0.0</text>元</view>
+        <view class="txt">年缴保费</view>
+      </view>
+      <view class="insurance_tap">
+        <view class="num"><text>1</text>张</view>
+        <view class="txt">保单管理</view>
+      </view><view class="insurance_tap">
+        <view class="num"><text>0</text>条</view>
+        <view class="txt">待续保</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="mt_3">
+    <view wx:if="{{show_jtcy}}">
+      <view class="jtcy_item">
+        <view class="icon"></view>
+        <view class="item_name">
+            <text>
+              <text class="name">林怀表</text> | <text class="sex">男</text>,<text class="age">55岁</text>\n
+              <text>保单:</text><text>1张</text>
+            </text>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{show_njbx}}">
+      2
+    </view>
+    <view wx:if="{{show_bdgl}}">
+      3
+    </view>
+    <view wx:if="{{show_dxb}}">
+      4
+    </view>
+    <view wx:if="{{show_zuxx}}" class="bgw vh">
+      <text class="text_of_nomessage">暂无信息</text>
+    </view>
+  </view>
+
+</view>
+
+
+<view class="footer">
+  <view class="footer_item">我要反馈</view>
+  <view class="footer_item">添加保单</view>
+  <view class="footer_item">保单检视</view>
+</view>

@@ -1,0 +1,20 @@
+<view class="header">
+  上传照片
+</view>
+
+<view class="box">
+  <view class="picture" bindtap='takephoto'>
+    +
+  </view>
+
+  <view class="item correct"></view>
+  <view class="item incorrect"></view>
+  <view class="item incorrect"></view>
+  
+</view>
+
+
+
+<view>
+
+</view>

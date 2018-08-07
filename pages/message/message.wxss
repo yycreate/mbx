@@ -1,0 +1,11 @@
+/* pages/message/message.wxss */
+.table_bg{
+  border-top: 1rpx solid #ececec;
+  background: #fff;
+  line-height: 91rpx;
+  padding-left: 13rpx;
+}
+.pictureSource{
+  width: 750rpx;
+  height: 1000rpx;
+}

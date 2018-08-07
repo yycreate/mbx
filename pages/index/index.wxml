@@ -1,0 +1,91 @@
+<view class="modal" wx:if="{{showModal}}">
+  <view class="photo_btn" bindtap='takephoto'>拍照</view>
+  <view class="close_btn" bindtap='closePhotoModal'>关闭</view>
+</view>
+
+<view class="content">
+<!--拖动栏-->
+<swiper class='tabs' current='1' bindchange='changeTap'>
+  <!--本月记录-->
+  <swiper-item class="tab-item">
+    <view class="header">
+          首页
+    </view>
+   <view>
+      <view class="banner">
+        <view class="banner_text">
+          <text>车险报价</text>
+        </view>
+        <view class="banner_item">
+          <view class="item"></view>
+        </view>
+
+        <view class="banner_text2">
+          <text class="one">脉车险全新上线</text>
+          <text class="two">输入车牌，极速出单</text>
+        </view>
+
+        <view class="click_btn">点击报价</view>
+
+      </view>
+    </view>
+  </swiper-item>
+
+  <!--保单页-->
+  <swiper-item class="tab-item">
+    <view class="header">
+      客户管理
+    </view>
+
+    <view wx:for="{{insuredList}}" wx:key="item" class="insurance_items" bindtap='gotoInsurance' data-id="{{item.insurance_id}}">
+      <view class="user_icon"></view>
+      <view class="user">
+        <view class="userMessage">
+          <text class="name">{{item.policy_holder_name}}</text> |
+          <text class="sex">男</text> .
+          <text class="age">18</text>
+        </view><!--第一行-->
+        <view class="insurance_nmuber">
+          <text>保单数量</text>:
+          <text>0</text>张
+        </view><!--第二行-->
+        <view class="home_number">
+          <text>家庭成员</text>:
+          <text>0</text>人
+        </view><!--第三行-->
+      </view>
+    </view>
+
+  </swiper-item>
+
+  <!--计划书-->
+  <swiper-item class="tab-item">
+    <view class="header">
+      计划书
+    </view>
+  </swiper-item>
+
+  <!--用户信息-->
+  <swiper-item class="tab-item">
+    
+  </swiper-item>
+
+</swiper>
+
+</view>
+
+<view class="footer">
+  <view class="footer_item">首页</view>
+  <view class="footer_item">客户管理</view>
+  <view class="footer_item">
+    <view class="home_point" bindtap='openPhotoModal'></view>
+  </view>
+  <view class="footer_item">计划书</view>
+  <view class="footer_item">我</view>
+</view>
+
+
+<modal title="该微信未登记工号" hidden="{{modalHidden}}" bindconfirm="onModalConfirm"
+ bindcannel="onModalCannel">
+  <view><input class="input" bindinput='numberInput' value="{{workerNumber}}" placeholder="输入工号"></input></view>
+</modal>

@@ -1,0 +1,21 @@
+<view class='header'>
+  保单信息
+</view>
+
+<view class="table">
+  <view class="table_bg">
+      <text class="col">投保人：</text>
+      <text class="val">{{insurance.policy_holder_name}}</text>
+  </view>
+  <view class="table_bg">
+      <text class="col">保单号：</text>
+      <text class="val">{{insurance.insurance_number}}</text>
+  </view>
+  <view class="table_bg">
+      <text class="col">保单类型：</text>
+      <text class="val">{{insurance.insurance_type_name}}</text>
+  </view>
+  
+  <image class="pictureSource" src="{{insurance.url}}"></image>
+</view>
+

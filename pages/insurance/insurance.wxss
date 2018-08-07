@@ -1,0 +1,107 @@
+/* pages/insurance/insurance.wxss */
+.header{
+  display: block;
+  width: 750rpx;
+  text-align: center;
+  background: #349AFF;
+  color: #fff;
+  line-height: 100rpx;
+  position: relative;
+}
+.header .back{
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 28rpx;
+  padding-left: 62rpx;
+}
+
+.viewContent{
+  overflow-y: auto;
+}
+
+.userMessage{
+  height: 326rpx;
+  background: #fff;
+}
+.userMessage >.user{
+  height: 205rpx;
+}
+.userMessage >.insurance_item{
+  border-top: 1px solid #ececec;
+  height: 120rpx;
+}
+.userMessage >.insurance_item .insurance_tap{
+  width: 187.5rpx;
+  float: left;
+  text-align: center;
+  font-size: 24rpx;
+  line-height: 56rpx;
+}
+.mt_3{
+  margin-top: 20rpx;
+}
+.jtcy_item{
+  height: 184rpx;
+  display: block;
+  background: #ffffff;
+  position: relative;
+}
+.jtcy_item >.icon{
+  position: absolute;
+  height: 92rpx;
+  width: 92rpx;
+  background: #ececec;
+  border-radius: 50%;
+  left: 30rpx;
+  top: 46rpx;
+}
+.item_name{
+  position: absolute;
+  left: 150rpx;top: 62rpx;
+  font-size: 18rpx;
+  color: #bebebe;
+}
+.item_name >.name{
+  font-size: 26rpx;
+  color:#000000;
+}
+.bgw{
+  background: #fff;
+}
+.vh{
+  height: 600rpx;
+  width: 750rpx;
+  position: absolute;
+}
+.text_of_nomessage{
+  font-size: 26rpx;
+  position: absolute;
+  bottom: 0;
+  top:50%;
+  left: 43%;
+  display: block;
+  width: 200rpx;
+  color: #a1a1a1;
+}
+
+/**脚tab**/
+.footer{
+  height: 116rpx;
+  width: 750rpx;
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #ffffff;
+}
+.footer >.footer_item{
+  display: block;
+  width: 250rpx;
+  float: left;
+  text-align: center;
+  height: 116rpx;
+  line-height: 116rpx;
+  font-size: 20rpx;
+  color: #717171;
+}

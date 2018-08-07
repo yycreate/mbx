@@ -1,0 +1,28 @@
+/* pages/upload/index.wxss */
+.box{
+  height: 580rpx;
+  background: #E1E1E1;
+  border-top: 1px solid #ececec;
+}
+.box .picture{
+  width: 700rpx;
+  background: #ffffff;
+  height: 371rpx;
+  margin: 25rpx auto;
+  text-align: center;
+  line-height: 371rpx;
+}
+.box .item{
+  width:195rpx;
+  height: 123rpx;
+  float: left;
+  text-align: center;
+  background: #fff;
+  margin: 25rpx;
+}
+.box .correct{
+  border: 1rpx solid #00ff00;
+}
+.box .incorrect{
+  border: 1rpx solid #ff0000;
+}
