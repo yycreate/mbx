@@ -108,9 +108,11 @@ Page({
               method: "get",
               data: params,
               success: function (res) {
-                console.log(res)
                 var jsonStr = res.data;
                 wx.hideToast();
+                wx.navigateTo({
+                  url: '/pages/index/index'
+                })
               }
             })//读取文件请求
           }//上传文件回调
