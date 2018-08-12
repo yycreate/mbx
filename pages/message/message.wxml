@@ -1,21 +1,39 @@
 <view class='header'>
   保单信息
 </view>
+<swiper class="tabs">
+  <swiper-item class="tab-item">
+    <view class="table">
+      <view class="table_bg">
+          <text class="col">投保人：</text>
+          <text class="val">{{insurance.policy_holder_name}}</text>
+      </view>
+      <view class="table_bg">
+          <text class="col">保单号：</text>
+          <text class="val">{{insurance.insurance_number}}</text>
+      </view>
+      <view class="table_bg">
+          <text class="col">保单类型：</text>
+          <text class="val">{{insurance.insurance_type_name}}</text>
+      </view>
+      <view class="table_bg">
+          <text class="col">保单份数：</text>
+          <text class="val">{{insurance.sure_num}}</text>
+      </view>
+      
+      <view class="table_bg" wx:key="key" wx:for="{{sure}}" wx-index="index" wx-item="item">
+        <text class="half">{{item.project_name}}:</text>
+        <text class="half txt_left">{{item.money}}</text>
+      </view>
+      <view class="table_bg">
+        <text class="half">总保额:</text>
+        <text class="half txt_left">{{moneyCount}}</text>
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item class="tab-item">
+    <image class="pictureSource" src="{{insurance.url}}"></image>
+  </swiper-item>
+</swiper>
 
-<view class="table">
-  <view class="table_bg">
-      <text class="col">投保人：</text>
-      <text class="val">{{insurance.policy_holder_name}}</text>
-  </view>
-  <view class="table_bg">
-      <text class="col">保单号：</text>
-      <text class="val">{{insurance.insurance_number}}</text>
-  </view>
-  <view class="table_bg">
-      <text class="col">保单类型：</text>
-      <text class="val">{{insurance.insurance_type_name}}</text>
-  </view>
-  
-  <image class="pictureSource" src="{{insurance.url}}"></image>
-</view>
 

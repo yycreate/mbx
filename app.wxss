@@ -12,3 +12,7 @@ page{
   line-height: 100rpx;
   position: relative;
 }
+.tabs{
+  margin-bottom: 80rpx;
+  height: 91%;
+}

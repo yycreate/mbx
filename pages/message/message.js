@@ -7,7 +7,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    insurance:{}
+    insurance:{},
+    sure:[],
+    moneyCount:0
   },
 
   /**
@@ -22,9 +24,11 @@ Page({
         id: options.id
       },
       success:function(res){
-        console.log(res.data.data[0]);
+        console.log(res.data.type);
         that.setData({
-          insurance:res.data.data[0]
+          insurance:res.data.data[0],
+          sure: res.data.type,
+          moneyCount: res.data.money
         })
       }
     })

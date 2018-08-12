@@ -47,7 +47,7 @@
         </view><!--第一行-->
         <view class="insurance_nmuber">
           <text>保单数量</text>:
-          <text>0</text>张
+          <text>{{item.sure_num}}</text>张
         </view><!--第二行-->
         <view class="home_number">
           <text>家庭成员</text>:

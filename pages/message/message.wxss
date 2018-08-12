@@ -9,3 +9,10 @@
   width: 750rpx;
   height: 1000rpx;
 }
+.txt_left{
+  text-align: left;
+}
+.table{
+  margin-bottom: 100rpx;
+  height: 100%;
+}
