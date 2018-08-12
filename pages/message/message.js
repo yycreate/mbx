@@ -24,7 +24,6 @@ Page({
         id: options.id
       },
       success:function(res){
-        console.log(res.data.type);
         that.setData({
           insurance:res.data.data[0],
           sure: res.data.type,
