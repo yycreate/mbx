@@ -16,3 +16,7 @@
   margin-bottom: 100rpx;
   height: 100%;
 }
+.fl{
+  position: absolute;
+  right:13rpx;
+}

@@ -80,5 +80,10 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  gotoUpdate: function(){
+    wx.navigateTo({
+      url: '/pages/update/index',
+    });
   }
 })

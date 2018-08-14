@@ -1,5 +1,6 @@
 <view class='header'>
   保单信息
+  <text class="fl" bindtap='gotoUpdate'>编辑</text>
 </view>
 <swiper class="tabs">
   <swiper-item class="tab-item">
