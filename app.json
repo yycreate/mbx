@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/update/index",
     "pages/index/index",
+    "pages/update/index",
     "pages/upload/index",
     "pages/message/message",
     "pages/insurance/insurance",

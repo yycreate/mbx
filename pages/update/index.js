@@ -1,18 +1,20 @@
 // pages/update/index.js
+const app = getApp();
+const host = app.data.host;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    insurance: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.insuranceInfo();
   },
 
   /**
@@ -62,5 +64,20 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  insuranceInfo:function(){
+    var that = this;
+    wx.request({
+      url: host + "/home/index/infoinsurace",
+      data: {
+        id: app.data.insuranceId
+      },
+      success: function (res) {
+        that.setData({
+          insurance: res.data.data[0]
+        })
+        console.log(that.data.insurance);
+      }
+    });
   }
 })

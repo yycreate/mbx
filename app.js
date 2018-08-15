@@ -12,7 +12,8 @@ App({
   data:{
     host: host,
     open_id: "",
-    workerNumber:""
+    workerNumber:"",
+    insuranceId:-1
   },
   onLaunch: function () {
     this.getopenId();

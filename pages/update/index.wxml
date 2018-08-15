@@ -2,45 +2,55 @@
   修改保单
 </view>
 
-<form bindsubmit="formSubmit" bindreset="formReset">
 
-  <view class="section">
-    <view class="name">保单号</view>
-    <input name="input" placeholder="输入保单号"/>
-  </view>
+<swiper class="tabs">
+  <swiper-item class="tab-item">
+    <form bindsubmit="formSubmit" bindreset="formReset">
 
-  <view>
-    <text class="text">被保人信息</text>
-  </view>
-  <view class="section">
-    <view class="name">姓名</view>
-    <input name="input" placeholder="输入被保人姓名"/>
-  </view>
-  <view class="section">
-    <view class="name">年龄</view>
-    <input name="input" placeholder="输入被保人年龄"/>
-  </view>
-  <view class="section">
-    <view class="name">身份证</view>
-    <input name="input" placeholder="输入被保人身份证"/>
-  </view>
+      <view class="section">
+        <view class="name">保单号</view>
+        <input name="input" placeholder="输入保单号" value='{{insurance.insurance_number}}'/>
+      </view>
+      <view class="section">
+        <view class="name">保单份数</view>
+        <input name="input" placeholder="输入保单份数" value='{{insurance.sure_num}}'/>
+      </view>
 
-  <view>
-    <text class="text">投保人信息</text>
-  </view>
-  <view class="section">
-    <view class="name">姓名</view>
-    <input name="input" placeholder="输入投保人姓名"/>
-  </view>
-  <view class="section">
-    <view class="name">年龄</view>
-    <input name="input" placeholder="输入投保人年龄"/>
-  </view>
-  <view class="section">
-    <view class="name">身份证</view>
-    <input name="input" placeholder="输入投保人身份证"/>
-  </view>
+      <view>
+        <text class="text">被保人信息</text>
+      </view>
+      <view class="section">
+        <view class="name">姓名</view>
+        <input name="input" placeholder="输入被保人姓名" value="{{insurance.insured_person_name}}"/>
+      </view>
+      <view class="section">
+        <view class="name">年龄</view>
+        <input name="input" placeholder="输入被保人年龄"/>
+      </view>
+      <view class="section">
+        <view class="name">身份证</view>
+        <input name="input" placeholder="输入被保人身份证"/>
+      </view>
 
-  
+      <view>
+        <text class="text">投保人信息</text>
+      </view>
+      <view class="section">
+        <view class="name">姓名</view>
+        <input name="input" placeholder="输入投保人姓名" value="{{insurance.policy_holder_name}}"/>
+      </view>
+      <view class="section">
+        <view class="name">年龄</view>
+        <input name="input" placeholder="输入投保人年龄" value=''/>
+      </view>
+      <view class="section">
+        <view class="name">身份证</view>
+        <input name="input" placeholder="输入投保人身份证" value=""/>
+      </view>
+    </form>
+  </swiper-item>
+  <swiper-item class="tab-item">
+    <image class="pictureSource" src="{{insurance.url}}"></image>
+  </swiper-item>
+</swiper>
 
-</form>

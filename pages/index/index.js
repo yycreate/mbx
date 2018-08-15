@@ -113,9 +113,10 @@ Page({
   },
   //跳转保单详细页
   gotoInsurance: function(e){
+    app.data.insuranceId = e.target.dataset.id;
     wx.navigateTo({
       url: '/pages/message/message?id=' + e.target.dataset.id
-    })
+    });
   },
   //拍照
   takephoto:function(){
@@ -175,7 +176,7 @@ Page({
   openPhotoModal: function(e){
     wx.navigateTo({
       url: '/pages/upload/index'
-    })
+    });
   },
   closePhotoModal: function (e) {
     this.setData({
