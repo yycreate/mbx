@@ -1,0 +1,46 @@
+<view class="header">
+  修改保单
+</view>
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+
+  <view class="section">
+    <view class="name">保单号</view>
+    <input name="input" placeholder="输入保单号"/>
+  </view>
+
+  <view>
+    <text class="text">被保人信息</text>
+  </view>
+  <view class="section">
+    <view class="name">姓名</view>
+    <input name="input" placeholder="输入被保人姓名"/>
+  </view>
+  <view class="section">
+    <view class="name">年龄</view>
+    <input name="input" placeholder="输入被保人年龄"/>
+  </view>
+  <view class="section">
+    <view class="name">身份证</view>
+    <input name="input" placeholder="输入被保人身份证"/>
+  </view>
+
+  <view>
+    <text class="text">投保人信息</text>
+  </view>
+  <view class="section">
+    <view class="name">姓名</view>
+    <input name="input" placeholder="输入投保人姓名"/>
+  </view>
+  <view class="section">
+    <view class="name">年龄</view>
+    <input name="input" placeholder="输入投保人年龄"/>
+  </view>
+  <view class="section">
+    <view class="name">身份证</view>
+    <input name="input" placeholder="输入投保人身份证"/>
+  </view>
+
+  
+
+</form>

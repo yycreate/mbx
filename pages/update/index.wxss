@@ -1,0 +1,18 @@
+/* pages/update/index.wxss */
+.section{
+  background: #fff;
+}
+.name{
+  padding-left: 13rpx;
+  width: 30%;
+  float: left;
+}
+.input{
+  padding-left: 13rpx;
+  width: 70%;
+  float: right;
+}
+.text{
+  line-height: 77rpx;
+  padding-left: 13rpx;
+}
