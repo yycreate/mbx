@@ -25,15 +25,15 @@
       </view>
       <view class="section">
         <view class="name">姓名</view>
-        <input name="input" placeholder="输入被保人姓名" value="{{insurance.insured_person_name}}"/>
+        <input name="insured_person_name" placeholder="输入被保人姓名" value="{{insurance.insured_person_name}}"/>
       </view>
       <view class="section">
-        <view class="name">年龄</view>
-        <input name="" placeholder="输入被保人年龄"/>
+        <view class="name">生日</view>
+        <input name="insured_person_birthday" placeholder="输入被保人生日"/>
       </view>
       <view class="section">
         <view class="name">身份证</view>
-        <input name="" placeholder="输入被保人身份证"/>
+        <input name="insured_creit_card" placeholder="输入被保人身份证"/>
       </view>
 
       <view>
@@ -44,15 +44,15 @@
         <input name="policy_holder_name" placeholder="输入投保人姓名" value="{{insurance.policy_holder_name}}"/>
       </view>
       <view class="section">
-        <view class="name">年龄</view>
-        <input name="" placeholder="输入投保人年龄" value=''/>
+        <view class="name">生日</view>
+        <input name="policy_holder_birthday" placeholder="输入投保人生日" value='{{insurance.policy_holder_birthday}}'/>
       </view>
       <view class="section">
         <view class="name">身份证</view>
-        <input name="" placeholder="输入投保人身份证" value=""/>
+        <input name="policy_creit_card" placeholder="输入投保人身份证" value="{{insurance.policy_creit_card}}"/>
       </view>
       <view class="section">
-        <text formType="submit">提交</text>
+        <button formType="submit">提交</button>
       </view>
     </form>
   </swiper-item>
