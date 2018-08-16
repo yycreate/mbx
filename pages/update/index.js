@@ -79,5 +79,8 @@ Page({
         console.log(that.data.insurance);
       }
     });
+  },
+  formSubmit:function(e){
+    console.log(e.detail.value);
   }
 })

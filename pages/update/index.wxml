@@ -5,15 +5,19 @@
 
 <swiper class="tabs">
   <swiper-item class="tab-item">
-    <form bindsubmit="formSubmit" bindreset="formReset">
+    <form bindsubmit="formSubmit">
 
       <view class="section">
         <view class="name">保单号</view>
-        <input name="input" placeholder="输入保单号" value='{{insurance.insurance_number}}'/>
+        <input name="insurance_number" placeholder="输入保单号" value='{{insurance.insurance_number}}'/>
+      </view>
+      <view class="section">
+        <view class="name">保单类型</view>
+        <input name="insurance_type_name" placeholder="输入保单类型" value='{{insurance.insurance_type_name}}'/>
       </view>
       <view class="section">
         <view class="name">保单份数</view>
-        <input name="input" placeholder="输入保单份数" value='{{insurance.sure_num}}'/>
+        <input name="sure_num" placeholder="输入保单份数" value='{{insurance.sure_num}}'/>
       </view>
 
       <view>
@@ -25,11 +29,11 @@
       </view>
       <view class="section">
         <view class="name">年龄</view>
-        <input name="input" placeholder="输入被保人年龄"/>
+        <input name="" placeholder="输入被保人年龄"/>
       </view>
       <view class="section">
         <view class="name">身份证</view>
-        <input name="input" placeholder="输入被保人身份证"/>
+        <input name="" placeholder="输入被保人身份证"/>
       </view>
 
       <view>
@@ -37,15 +41,18 @@
       </view>
       <view class="section">
         <view class="name">姓名</view>
-        <input name="input" placeholder="输入投保人姓名" value="{{insurance.policy_holder_name}}"/>
+        <input name="policy_holder_name" placeholder="输入投保人姓名" value="{{insurance.policy_holder_name}}"/>
       </view>
       <view class="section">
         <view class="name">年龄</view>
-        <input name="input" placeholder="输入投保人年龄" value=''/>
+        <input name="" placeholder="输入投保人年龄" value=''/>
       </view>
       <view class="section">
         <view class="name">身份证</view>
-        <input name="input" placeholder="输入投保人身份证" value=""/>
+        <input name="" placeholder="输入投保人身份证" value=""/>
+      </view>
+      <view class="section">
+        <text formType="submit">提交</text>
       </view>
     </form>
   </swiper-item>

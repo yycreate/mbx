@@ -16,3 +16,7 @@
   line-height: 77rpx;
   padding-left: 13rpx;
 }
+.pictureSource{
+  width: 750rpx;
+  height: 1000rpx;
+}
