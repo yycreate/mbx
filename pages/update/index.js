@@ -82,14 +82,24 @@ Page({
   },
   //更新单据数据
   formSubmit:function(e){
-    console.log(e.detail.value);
+    console.log(e.detail.value.sure_num);
     wx.request({
-      url: host + "/home/index/updateinsurace",
+      url: host + "/home/index/updateInsuraceInfo",
+      method: "get",
       data:{
-        
+        insurance_id: app.data.insuranceId,
+        sure_num: e.detail.value.sure_num,
+        insurance_number: e.detail.value.insurance_number,
+        insurance_type_name: e.detail.value.insurance_type_name,
+        insured_person_name: e.detail.value.insured_person_name,
+        insured_creit_card: e.detail.value.insured_creit_card,
+        insured_person_birthday: e.detail.value.insured_person_birthday,
+        policy_holder_name: e.detail.value.policy_holder_name,
+        policy_holder_birthday: e.detail.value.policy_holder_birthday,
+        policy_creit_card: e.detail.value.policy_creit_card
       },
       success: function(e){
-        console.log(e)
+        
       }
     })
 
