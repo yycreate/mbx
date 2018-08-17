@@ -65,6 +65,7 @@ Page({
   onShareAppMessage: function () {
   
   },
+  //获取保单数据
   insuranceInfo:function(){
     var that = this;
     wx.request({
@@ -76,11 +77,21 @@ Page({
         that.setData({
           insurance: res.data.data[0]
         })
-        console.log(that.data.insurance);
       }
     });
   },
+  //更新单据数据
   formSubmit:function(e){
     console.log(e.detail.value);
+    wx.request({
+      url: host + "/home/index/updateinsurace",
+      data:{
+        
+      },
+      success: function(e){
+        console.log(e)
+      }
+    })
+
   }
 })
