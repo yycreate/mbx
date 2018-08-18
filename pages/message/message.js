@@ -85,5 +85,13 @@ Page({
     wx.navigateTo({
       url: '/pages/update/index',
     });
+  },
+  readPicture: function (event) {
+    var url = this.data.insurance.url;
+    //图片预览
+    wx.previewImage({
+      current: url, // 当前显示图片的http链接
+      urls: [url] // 需要预览的图片http链接列表
+    })
   }
 })

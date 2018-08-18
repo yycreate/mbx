@@ -82,7 +82,6 @@ Page({
   },
   //更新单据数据
   formSubmit:function(e){
-    console.log(e.detail.value.sure_num);
     wx.request({
       url: host + "/home/index/updateInsuraceInfo",
       method: "get",
@@ -99,9 +98,19 @@ Page({
         policy_creit_card: e.detail.value.policy_creit_card
       },
       success: function(e){
-        
+        wx.navigateTo({
+          url: "/pages/message/message?id=" + app.data.insuranceId
+        });
       }
     })
 
+  },
+  readPicture: function (event) {
+    var url = this.data.insurance.url;
+    //图片预览
+    wx.previewImage({
+      current: url, // 当前显示图片的http链接
+      urls: [url] // 需要预览的图片http链接列表
+    })
   }
 })

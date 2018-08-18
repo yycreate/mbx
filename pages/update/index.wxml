@@ -29,11 +29,11 @@
       </view>
       <view class="section">
         <view class="name">生日</view>
-        <input name="insured_person_birthday" placeholder="输入被保人生日"/>
+        <input name="insured_person_birthday" placeholder="输入被保人生日" value="{{insurance.insured_person_birthday}}"/>
       </view>
       <view class="section">
         <view class="name">身份证</view>
-        <input name="insured_creit_card" placeholder="输入被保人身份证"/>
+        <input name="insured_creit_card" placeholder="输入被保人身份证" value="{{insurance.insured_creit_card}}"/>
       </view>
 
       <view>
@@ -57,7 +57,7 @@
     </form>
   </swiper-item>
   <swiper-item class="tab-item">
-    <image class="pictureSource" src="{{insurance.url}}"></image>
+    <image bindtap="readPicture" class="pictureSource" src="{{insurance.url}}"></image>
   </swiper-item>
 </swiper>
 

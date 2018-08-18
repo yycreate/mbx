@@ -33,7 +33,7 @@
     </view>
   </swiper-item>
   <swiper-item class="tab-item">
-    <image class="pictureSource" src="{{insurance.url}}"></image>
+    <image bindtap="readPicture" class="pictureSource" src="{{insurance.url}}"></image>
   </swiper-item>
 </swiper>
 
