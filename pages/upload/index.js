@@ -110,9 +110,15 @@ Page({
               success: function (res) {
                 var jsonStr = res.data;
                 wx.hideToast();
-                wx.navigateTo({
-                  url: '/pages/index/index'
-                })
+                if(!res.data.isSuccess){
+                  wx.showModal({
+                    content: res.data.message,
+                  })
+                }else{
+                  wx.navigateTo({
+                    url: '/pages/index/index'
+                  })
+                };
               }
             })//读取文件请求
           }//上传文件回调
