@@ -2,7 +2,19 @@
   保单信息
   <text class="fl" bindtap='gotoUpdate'>编辑</text>
 </view>
-<swiper class="tabs">
+<swiper class="tabs" current='1'>
+  <swiper-item class="tab-item">
+    <view class="mtable">
+      <view class="tr">
+        <view class="th">保障类型</view>
+        <view class="th">保障金额</view>
+      </view>
+      <view class="tr">
+        <view class='td'> {{msg}} </view>
+        <view class="td"> {{msg}} </view>
+      </view>
+    </view>
+  </swiper-item>
   <swiper-item class="tab-item">
     <view class="table">
       <view class="table_bg">
