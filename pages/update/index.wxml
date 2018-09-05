@@ -2,7 +2,6 @@
   修改保单
 </view>
 
-
 <swiper class="tabs">
   <swiper-item class="tab-item">
     <form bindsubmit="formSubmit">

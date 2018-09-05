@@ -69,6 +69,7 @@ Page({
             modalHidden: false
           });
         }else{
+          wx.setStorageSync("userInfo", res.data.data[0]);
           that.setData({
             workerNumber: res.data.data[0].worker_number
           })
