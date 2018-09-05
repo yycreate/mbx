@@ -20,3 +20,29 @@
   position: absolute;
   right:13rpx;
 }
+
+
+.mtable {
+border-right: 0;
+border-bottom: 0;
+width: 100%;
+}
+
+.tr {
+  border-top: #efefef 1rpx solid;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.th, .td {
+padding: 10px;
+background:#fff;
+text-align: center;
+width: 100%;
+}
+
+.th {
+  font-weight: 400;
+  background-color: #fff;
+}
