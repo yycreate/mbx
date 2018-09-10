@@ -37,6 +37,7 @@ App({
           success: function (res) {
             var data = JSON.parse(res.data);
             that.data.open_id = data.openid;
+            wx.setStorageSync("loginData", data);
           }
         })//request
       }

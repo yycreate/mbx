@@ -7,9 +7,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    insurance: {}
+    insurance: {},
+    array:[],
+    index:0
   },
-
+  bindPickerChange: function(e){
+    this.setData({
+      index: e.detail.value
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -21,7 +27,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    this.typesList();
   },
 
   /**
@@ -42,7 +48,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+    
   },
 
   /**
@@ -64,6 +70,19 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  typesList:function(){
+    var that = this;
+    wx.request({
+      url: host + "/Home/index/typeInsure",
+      method: "GET",
+      success: function(data){
+        console.log(data.data)
+        that.setData({
+          array: data.data
+        });
+      }
+    })
   },
   //获取保单数据
   insuranceInfo:function(){

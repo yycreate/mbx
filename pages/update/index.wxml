@@ -18,6 +18,16 @@
         <view class="name">保单份数</view>
         <input name="sure_num" placeholder="输入保单份数" value='{{insurance.sure_num}}'/>
       </view>
+      <!--
+      <view class="section">
+        <view class="name">保单类型</view>
+        <picker value='{{insurance.insurance_type_name}}' class="in_picker" bindchange="bindPickerChange" range="{{array}}">
+          <view class="picker">
+            {{array[index]}}
+          </view>
+        </picker>
+      </view>
+      -->
 
       <view>
         <text class="text">被保人信息</text>
