@@ -224,5 +224,9 @@ Page({
         })//request
       }
     });
-  }//getopenId方法
+  },//getopenId方法
+  onShow: function(){
+    //显示页面刷新数据
+    this.listInsurace();
+  }
 })

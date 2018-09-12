@@ -17,7 +17,7 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
-    console.log(options)
+    app.data.insuranceId = options.id;//公用信息作为更新
     wx.request({
       url: host +"/home/index/infoinsurace",
       data:{
