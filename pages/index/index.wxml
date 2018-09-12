@@ -37,22 +37,16 @@
       客户管理
     </view>
 
-    <view wx:for="{{insuredList}}" wx:key="item" class="insurance_items" bindtap='gotoInsurance' data-id="{{item.insurance_id}}">
+    <view wx:for="{{insuredList}}" wx:key="item" class="insurance_items" bindtap='gotoInsurance' data-name="{{item.policy_holder_name}}">
       <view class="user_icon"></view>
       <view class="user">
         <view class="userMessage">
-          <text class="name">{{item.policy_holder_name}}</text> |
-          <text class="sex">男</text> .
-          <text class="age">18</text>
+          <text class="name">{{item.policy_holder_name}}</text>
         </view><!--第一行-->
         <view class="insurance_nmuber">
           <text>保单数量</text>:
-          <text>{{item.sure_num}}</text>张
+          <text>{{item.count}}</text>份
         </view><!--第二行-->
-        <view class="home_number">
-          <text>家庭成员</text>:
-          <text>0</text>人
-        </view><!--第三行-->
       </view>
     </view>
 

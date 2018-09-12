@@ -13,7 +13,8 @@ App({
     host: host,
     open_id: "",
     workerNumber:"",
-    insuranceId:-1
+    insuranceId:-1,
+    insuranceName:""
   },
   onLaunch: function () {
     this.getopenId();

@@ -79,18 +79,34 @@ Page({
     })
   },
   //查询保单列表: 
+  // listInsurace: function(){
+  //   var that = this;
+  //   //查询
+  //   wx.request({
+  //     url: host + "/Home/index/listresurace",
+  //     method: "get",
+  //     data:{
+  //       worker_number:that.data.workerNumber
+  //     },
+  //     success: function (res) {
+  //       that.setData({
+  //         insuredList: res.data.data
+  //       });
+  //     }
+  //   })
+  // },
   listInsurace: function(){
     var that = this;
     //查询
     wx.request({
-      url: host + "/Home/index/listresurace",
+      url: host + "/Home/person/personWith",
       method: "get",
       data:{
         worker_number:that.data.workerNumber
       },
       success: function (res) {
         that.setData({
-          insuredList: res.data.data
+          insuredList: res.data
         });
       }
     })
@@ -113,9 +129,9 @@ Page({
   },
   //跳转保单详细页
   gotoInsurance: function(e){
-    app.data.insuranceId = e.target.dataset.id;
+    app.data.insuranceName = e.currentTarget.dataset.name;
     wx.navigateTo({
-      url: '/pages/message/message?id=' + e.target.dataset.id
+      url: '/pages/person/person?name=' + e.target.dataset.name
     });
   },
   //拍照

@@ -1,0 +1,25 @@
+/* pages/person/person.wxss */
+.table_bg{
+  border-top: 1rpx solid #ececec;
+  background: #fff;
+  line-height: 91rpx;
+  padding-left: 13rpx;
+}
+
+.insuraceNum{
+  margin-top: 37rpx;
+  background: #fefefe;
+}
+.insurance{
+  border-bottom: 1px solid #ececec;
+  font-size: 33rpx;
+  padding: 13px;
+  line-height: 37rpx;
+}
+.body{
+  height: 73%;
+}
+.insuraceNum{
+  overflow-y: scroll;
+  height: 100%;
+}

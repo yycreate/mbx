@@ -1,0 +1,23 @@
+<view class='header'>
+  个人中心
+</view>
+<view class="body">
+  <view class="personMessage table">
+      <view class="table_bg">
+          <text class="col">姓名：</text>
+          <text class="val">{{name}}</text>
+      </view>
+      <view class="table_bg">
+          <text class="col">保单份数：</text>
+          <text class="val">{{count}}</text>
+      </view>
+  </view>
+  <view class="insuraceNum">
+    <view class="insurance" wx:for="{{insuranceArr}}" wx:key="{{item}}" bindtap='messagePage' data-id="{{item.insurance_id}}" >
+      <view class="num">{{item.insurance_number}}</view>
+      <view class="age">{{item.insurance_type_name}}</view>
+      <view class="age">{{item.sure_num}}份</view>
+    </view>
+    
+  </view>
+</view>
