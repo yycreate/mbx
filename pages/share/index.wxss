@@ -1,0 +1,10 @@
+.title{
+  font-size: 71rpx;
+  padding: 13px;
+  line-height: 137rpx;
+}
+.list{
+  font-size: 33rpx;
+  padding: 13px;
+  line-height: 37rpx;
+}

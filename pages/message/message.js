@@ -11,11 +11,38 @@ Page({
     sure:[],
     moneyCount:0
   },
-
+  onShareAppMessage:function(ops){
+    return {
+      title: '保单管理工具',
+      path: '/page/share/index',
+      success: function (res) {
+        console.log(res.shareTickets[0])
+        wx.getShareInfo({
+          shareTicket: res.shareTickets[0],
+          success: function (res) { console.log(res) },
+          fail: function (res) { console.log(res) },
+          complete: function (res) { console.log(res) }
+        })
+      },
+      fail: function (res) {
+        // 分享失败
+        console.log(res)
+      }
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.showShareMenu({
+      withShareTicket: true,
+      success: function (res) {
+        console.log(res)
+      },
+      fail: function (res) {
+        console.log(res)
+      }
+    });
     var that = this;
     app.data.insuranceId = options.id;//公用信息作为更新
     wx.request({

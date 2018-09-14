@@ -6,6 +6,7 @@
     "pages/upload/index",
     "pages/message/message",
     "pages/insurance/insurance",
+    "pages/share/index",
     "pages/logs/logs"
   ],
   "window": {
