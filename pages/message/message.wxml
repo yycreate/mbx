@@ -1,6 +1,7 @@
 <view class='header'>
+  <button class="fl bgw" open-type='share'>分享</button>
   保单信息
-  <text class="fl" bindtap='gotoUpdate'>编辑</text>
+  <text class="fr" bindtap='gotoUpdate'>编辑</text>
 </view>
 <swiper class="tabs" current='1'>
   <swiper-item class="tab-item">
@@ -48,5 +49,6 @@
     <image bindtap="readPicture" class="pictureSource" src="{{insurance.url}}"></image>
   </swiper-item>
 </swiper>
+
 
 

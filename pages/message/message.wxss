@@ -16,9 +16,18 @@
   margin-bottom: 100rpx;
   height: 100%;
 }
-.fl{
+.fr{
   position: absolute;
   right:13rpx;
+}
+.fl{
+  position: absolute;
+  left:13rpx;
+}
+.bgw{
+  background: inherit;
+  border: none;
+  color:#ffffff;
 }
 
 
