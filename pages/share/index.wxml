@@ -1,7 +1,10 @@
 <view class='header'>
-  <view>保单信息</view>
+  <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+  <view wx:else>请升级微信版本</view>
 </view>
 <view class="body">
+  
+
   <view class="title">保单管理工具</view>
   <view class="list">1.照片识别保单信息</view>
   <view class="list">2.分享保单信息</view>

@@ -11,31 +11,28 @@ Page({
     sure:[],
     moneyCount:0
   },
+  /**
+   * 用户点击右上角分享
+   */
   onShareAppMessage: function(ops){
     console.log("onShareAppMessage")
-    console.log(ops);
     return {
-      title: '资料管理小程序',
-      desc: '分享介绍页面，方便快捷管理保单！',
-      path: '/pages/share/index'
+      title: '保单管理工具',
+      path: '/pages/share/index',
+      success: function (res) {
+        console.log(res.shareTickets[0])
+        wx.getShareInfo({
+          shareTicket: res.shareTickets[0],
+          success: function (res) { console.log(res) },
+          fail: function (res) { console.log(res) },
+          complete: function (res) { console.log(res) }
+        })
+      },
+      fail: function (res) {
+        // 分享失败
+        console.log(res)
+      }
     }
-    // return {
-    //   title: '保单管理工具',
-    //   path: '/pages/share/index',
-    //   success: function (res) {
-    //     console.log(res.shareTickets[0])
-    //     wx.getShareInfo({
-    //       shareTicket: res.shareTickets[0],
-    //       success: function (res) { console.log(res) },
-    //       fail: function (res) { console.log(res) },
-    //       complete: function (res) { console.log(res) }
-    //     })
-    //   },
-    //   fail: function (res) {
-    //     // 分享失败
-    //     console.log(res)
-    //   }
-    // }
   },
   /**
    * 生命周期函数--监听页面加载
@@ -73,14 +70,16 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    wx.showShareMenu({
+      withShareTicket:true
+    });
   },
 
   /**
@@ -101,20 +100,13 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+    
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
   
   },
   gotoUpdate: function(){
