@@ -3,8 +3,8 @@ const APP_SECRET = '368cf87ede8a22a2bbae44dafc6b165e';//输入小程序app_secre
 var SESSION_KEY = ''//储存获取到session_key  
 
 
-var host = "https://www.pailibaook.com";
-// var host = "http://127.0.0.1:8088";
+// var host = "https://www.pailibaook.com";
+var host = "http://127.0.0.1:9999";
 
 var workerNumber = "";
 //app.js
@@ -27,7 +27,7 @@ App({
       success: res => {
         wx.request({
           // url: 'https://api.weixin.qq.com/sns/jscode2session',
-          url: host + "/Home/UserLogin/openInfo",
+          url: host + "/api/user/wx/openInfo",
           method: 'GET',
           data: {
             appid: APP_ID,
@@ -36,7 +36,7 @@ App({
             grant_type: 'authorization_code'
           },
           success: function (res) {
-            var data = JSON.parse(res.data);
+            var data = res.data.data;
             that.data.open_id = data.openid;
             wx.setStorageSync("loginData", data);
           }

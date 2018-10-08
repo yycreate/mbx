@@ -23,13 +23,14 @@ Page({
     var wn = this.data.workerNumber;
     //记录微信工号
     wx.request({
-      url: host +"/home/index/insertUserInfo",
+      url: host +"/api/user/insertUserInfo",
+      method:"GET",
       data:{
         open_id: openId,
         worker_number: wn
       },
       success:function(res){
-        if (res.data.isSuccess){
+        if (res.data.meta.success){
           that.setData({
             modalHidden: true
           });
@@ -59,12 +60,12 @@ Page({
     var that = this;
     //记录微信工号
     wx.request({
-      url: host + "/Home/index/infoMessageByOpenId",
+      url: host + "/api/user/infoMessageByOpenId",
       data: {
         open_id: openId
       },
       success: function (res) {
-        if (!res.data.isSuccess){
+        if (res.data.data==null){
           that.setData({
             modalHidden: false
           });
@@ -100,14 +101,14 @@ Page({
     var that = this;
     //查询
     wx.request({
-      url: host + "/Home/person/personWith",
+      url: host + "/api/Insurance/personWithInsure",
       method: "get",
       data:{
         worker_number:that.data.workerNumber
       },
       success: function (res) {
         that.setData({
-          insuredList: res.data
+          insuredList: res.data.data
         });
       }
     })
@@ -208,7 +209,7 @@ Page({
       success: res => {
         wx.request({
           // url: 'https://api.weixin.qq.com/sns/jscode2session',
-          url: host + "/Home/UserLogin/openInfo",
+          url: host + "/api/user/wx/openInfo",
           method: 'GET',
           data: {
             appid: APP_ID,
@@ -217,7 +218,7 @@ Page({
             grant_type: 'authorization_code'
           },
           success: function (res) {
-            var data = JSON.parse(res.data);
+            var data = res.data.data;
             that.data.open_id = data.openid;
             that.checkOpenId();
           }
