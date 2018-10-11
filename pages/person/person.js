@@ -18,13 +18,13 @@ Page({
     var name = this.data.name;
     var that = this;
     wx.request({
-      url: host + '/Home/person/byPersonInsurance?name=' + name,
+      url: host + '/api/Insurance/listresuraceByName?name=' + name,
       method: "GET",
       success: function(res){
-        console.log(res.data)
+        console.log(res.data.data)
         that.setData({
           count: res.data.length,
-          insuranceArr: res.data
+          insuranceArr: res.data.data
         })
       }
     });

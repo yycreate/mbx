@@ -52,7 +52,7 @@ Page({
     var that = this;
     app.data.insuranceId = options.id;//公用信息作为更新
     wx.request({
-      url: host +"/home/index/infoinsurace",
+      url: host +"/api/Insurance/typeInsure",
       data:{
         id: options.id
       },

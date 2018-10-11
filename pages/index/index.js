@@ -70,11 +70,11 @@ Page({
             modalHidden: false
           });
         }else{
-          wx.setStorageSync("userInfo", res.data.data[0]);
+          wx.setStorageSync("userInfo", res.data.data);
           that.setData({
-            workerNumber: res.data.data[0].worker_number
+            workerNumber: res.data.data.worker_number
           })
-          app.data.workerNumber = res.data.data[0].worker_number
+          app.data.workerNumber = res.data.data.worker_number
           that.listInsurace();
         }
       }

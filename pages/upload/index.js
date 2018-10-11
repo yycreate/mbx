@@ -137,7 +137,7 @@ Page({
           imageinfo: res.tempFiles[0].path
         });
         wx.uploadFile({
-          url: host + '/java/ocr/upload',
+          url: host + '/ocr/upload',
           // url: "http://localhost:9999/ocr/upload",
           filePath: res.tempFilePaths[0],
           name: 'img',
@@ -153,7 +153,9 @@ Page({
             'user': 'test'
           },
           success: function (res) {
-            console.log(res);
+            wx.navigateTo({
+              url: '/pages/index/index'
+            })
           }//上传文件回调
         })
       },
