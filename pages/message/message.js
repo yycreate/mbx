@@ -52,16 +52,17 @@ Page({
     var that = this;
     app.data.insuranceId = options.id;//公用信息作为更新
     wx.request({
-      url: host +"/api/Insurance/typeInsure",
+      url: host +"/api/Insurance/listresuraceById",
       data:{
         id: options.id
       },
       success:function(res){
         that.setData({
-          insurance:res.data.data[0],
-          sure: res.data.type,
-          moneyCount: res.data.money
-        })
+          insurance:res.data.data,
+          sure: res.data.data.type,
+          moneyCount: res.data.data.money
+        });
+        wx.setStorageSync("updateInfo", res.data.data);
       }
     })
   },

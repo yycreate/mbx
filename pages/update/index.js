@@ -72,37 +72,20 @@ Page({
   
   },
   typesList:function(){
-    var that = this;
-    wx.request({
-      url: host + "/Home/index/typeInsure",
-      method: "GET",
-      success: function(data){
-        console.log(data.data)
-        that.setData({
-          array: data.data
-        });
-      }
-    })
+    //查询类型
   },
   //获取保单数据
   insuranceInfo:function(){
-    var that = this;
-    wx.request({
-      url: host + "/home/index/infoinsurace",
-      data: {
-        id: app.data.insuranceId
-      },
-      success: function (res) {
-        that.setData({
-          insurance: res.data.data[0]
-        })
-      }
-    });
+    var info = wx.getStorageSync("updateInfo");
+    console.log(info)
+    this.setData({
+      insurance: info
+    })
   },
   //更新单据数据
   formSubmit:function(e){
     wx.request({
-      url: host + "/home/index/updateInsuraceInfo",
+      url: host + "/api/Insurance/updateInsuraceInfo",
       method: "get",
       data:{
         insurance_id: app.data.insuranceId,
