@@ -136,9 +136,9 @@ Page({
         that.setData({
           imageinfo: res.tempFiles[0].path
         });
+        var wn = app.data.workerNumber
         wx.uploadFile({
-          url: host + '/ocr/upload',
-          // url: "http://localhost:9999/ocr/upload",
+          url: host + '/ocr/upload/' + wn,
           filePath: res.tempFilePaths[0],
           name: 'img',
           header: {
@@ -156,7 +156,10 @@ Page({
             wx.navigateTo({
               url: '/pages/index/index'
             })
-          }//上传文件回调
+          },//上传文件回调
+          fail: function(res){
+            
+          }
         })
       },
     })

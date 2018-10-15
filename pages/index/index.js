@@ -29,7 +29,7 @@ Page({
         open_id: openId,
         worker_number: wn
       },
-      success:function(res){
+      success:function(res){debugger
         if (res.data.meta.success){
           that.setData({
             modalHidden: true
