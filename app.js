@@ -3,8 +3,8 @@ const APP_SECRET = '368cf87ede8a22a2bbae44dafc6b165e';//输入小程序app_secre
 var SESSION_KEY = ''//储存获取到session_key  
 
 
-// var host = "https://www.pailibaook.com/java";
-var host = "http://127.0.0.1:9999";
+var host = "https://www.pailibaook.com/java/";
+// var host = "http://127.0.0.1:9999";
 // var host = "http://119.23.56.101:9999";
 
 var workerNumber = "";

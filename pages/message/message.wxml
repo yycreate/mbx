@@ -10,9 +10,9 @@
         <view class="th">保障类型</view>
         <view class="th">保障金额</view>
       </view>
-      <view class="tr">
-        <view class='td'> {{msg}} </view>
-        <view class="td"> {{msg}} </view>
+      <view class="tr" wx:key="key" wx:for="{{pt}}" wx-index="index" wx-item="item">
+        <text class="th">{{item.ensure_name}}</text>
+        <text class="th txt_left">{{item.money}}</text>
       </view>
     </view>
   </swiper-item>

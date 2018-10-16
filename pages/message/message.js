@@ -9,7 +9,8 @@ Page({
   data: {
     insurance:{},
     sure:[],
-    moneyCount:0
+    moneyCount:0,
+    pt:[]
   },
   /**
    * 用户点击右上角分享
@@ -56,11 +57,12 @@ Page({
       data:{
         id: options.id
       },
-      success:function(res){
+      success: function (res) {
         that.setData({
           insurance:res.data.data,
           sure: res.data.data.type,
-          moneyCount: res.data.data.money
+          moneyCount: res.data.data.money,
+          pt: res.data.data.pt
         });
         wx.setStorageSync("updateInfo", res.data.data);
       }
