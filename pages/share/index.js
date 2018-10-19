@@ -1,3 +1,5 @@
+const app = getApp();
+const host = app.data.host;
 // pages/share/index.js
 Page({
 
@@ -5,14 +7,31 @@ Page({
    * 页面的初始数据
    */
   data: {
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    id: -1,
+    insurance: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.setData({
+      id: options.id
+    }); 
+    var that = this;
+    wx.request({
+      url: host + '/api/Insurance/listresuraceById',
+      data: {
+        id: options.id
+      },
+      method: "GET",
+      success: function (res) {
+        that.setData({
+          insurance: res.data.data
+        })
+      }
+    })
   },
 
   /**

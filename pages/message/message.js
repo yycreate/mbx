@@ -16,18 +16,11 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function(ops){
-    console.log("onShareAppMessage")
     return {
       title: '保单管理工具',
-      path: '/pages/share/index',
+      path: '/pages/share/index?id=' + this.data.insurance.insurance_id,
       success: function (res) {
-        console.log(res.shareTickets[0])
-        wx.getShareInfo({
-          shareTicket: res.shareTickets[0],
-          success: function (res) { console.log(res) },
-          fail: function (res) { console.log(res) },
-          complete: function (res) { console.log(res) }
-        })
+        
       },
       fail: function (res) {
         // 分享失败
